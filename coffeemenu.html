@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffeemenu</title>   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
+    <style>
+            .nav
+            {
+                margin-top: 60px;
+                margin-left: 30px;
+            }
+            .nav ul li
+            {
+                display: inline-block;
+            }
+            .nav ul li a
+            {
+                color: rgba(0, 0, 0, 0.733);
+                font-weight: bolder;
+                font-size: 15px;
+                padding-left: 50px;
+            }
+            .logs
+            {
+                margin-left: 580px;
+                margin-top: -90px;
+            }
+            .nav1
+            {
+                margin-left: 780px;
+                margin-top: -60px;
+            }
+            
+            .nav1 ul li
+            {
+                display: inline-block;
+            }
+            .nav1 ul li a
+            {
+                color: rgba(0, 0, 0, 0.733);
+                font-weight: bolder;
+                font-size: 15px;
+                padding-left: 50px;
+            }
+            .ser
+            {
+                margin-left: 320px;
+                margin-top: -45px;
+            }
+            .cop
+            {
+                margin-left: -30px;
+                margin-top: 100px;
+                height: 400px;
+                position: relative;
+            }
+            .hop
+            {
+                position: absolute;
+                text-align: center;
+                font-size: 60px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                margin-top: 50px;
+                margin-left: 430px;
+            }
+            .sop
+            {
+                text-align: center;
+                margin-top: 150px;
+                font-weight: bolder;
+            }
+            .men
+            {
+                position: relative;
+                text-align: center;
+                margin-top: 150px;
+                font-weight: bolder;
+            }
+            .cur 
+            {
+                background-color:  rgba(161, 78, 30, 0.904);
+                height: 25px;
+                width: 100px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                border-radius: 10px;
+                margin-left: 610px;
+                margin-top: -40px;
+            }
+            .men h1
+            {
+                font-weight: bolder;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 50px;
+                color: rgb(10, 0, 0);
+            }
+            .but
+            {
+                text-align: center;
+                margin-top: 30px;
+            }
+            .shi 
+            {
+                background-color: rgba(161, 78, 30, 0.904);
+                color: white;
+                border-color: rgba(92, 80, 80, 0.363);
+                padding-right: 20px;
+            }
+            .got
+            {
+                display: grid;
+                grid-template-columns: auto auto;
+                position: relative;
+                margin-top: 50px;
+            }
+            .box1
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                
+            }
+            .achu 
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp1
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box2
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0,0.25);
+                position: absolute;
+                margin-left: 600px;
+                margin-top: -1px;
+            }
+            .achu1
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu1
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp2
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box3
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                top: 150px;
+            }
+            .achu2
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu2
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp3
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box4
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                margin-left: 600px;
+                margin-top: -1px;
+                top: 150px;
+            }
+            .achu3
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu3
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp4
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box5
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                top: 300px;
+            }
+            .achu4
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu4
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp5
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box6
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                margin-left: 600px;
+                margin-top: -1px;
+                top: 300px;
+            }
+            .achu5
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu5
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp6
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box7
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                top: 450px;
+            }
+            .achu6
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu6
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp7
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box8
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                margin-left: 600px;
+                margin-top: -1px;
+                top: 450px;
+            }
+            .achu7
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu7
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp8
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box9
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                top: 600px;
+            }
+            .achu8
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu8
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp9
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box10
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                margin-left: 600px;
+                margin-top: -1px;
+                top: 600px;
+            }
+            .achu9
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu9
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp10
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box11
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                top: 750px;
+            }
+            .achu10
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu10
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp11
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .box12
+            {
+                height: 110px;
+                width: 500px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.25);
+                position: absolute;
+                margin-left: 600px;
+                margin-top: -1px;
+                top: 750px;
+            }
+            .achu11
+            {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+                font-weight:bolder;
+                top: 40px;
+                left: 70px;
+            }
+            .echu11
+            {
+                left: 80%;
+                position: absolute;
+                top: 40px;
+                color: rgba(161, 78, 30, 0.904);
+                font-weight: bolder;
+            }
+            .imp12
+            {
+                position: absolute;
+                top: 9px;
+                left: -43px;
+            }
+            .footer
+            {  
+                background-color: black;
+            height: 600px;
+            width: 100%;
+            position: relative;
+            top: 1000px;
+            left: -15px;
+            }
+            .con1 img
+            {
+                position: absolute;
+                top: 20%;
+                left: 7%;
+            }
+            .con1 p
+            {
+                color: white;
+                position: absolute;
+                top: 20.5%;
+                left: 9%;
+                font-weight: bolder;
+            }
+            .mar1 img
+            {
+                position: absolute;
+                top:20%;
+                left: 25%;
+            }
+            .mar1 p
+            {
+                color: white;
+                position: absolute;
+                top: 20.5%;
+                left: 27%;
+                font-weight: bolder;
+            }
+            .email
+            {
+                padding-right: 100px;
+                position: absolute;
+                top: 20%;
+                left: 55%;
+            }
+            .tux
+            {
+                background-color:  rgba(161, 78, 30, 0.904);
+                color: white;
+                position: absolute;
+                padding: 5px 5px 5px 5px;
+                letter-spacing: 2px;
+                font-weight: bolder;
+                border-radius: 5px;
+                top: 19%;
+                left: 75%;
+            }
+            
+            .logss
+            {
+                position: absolute;
+                top: 40%;
+                left: 7%;
+            }
+            .logss h5
+            {
+                color: white;
+                margin-top: 70px;
+                font-weight: bolder;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .nav2
+            {
+                position: absolute;
+                top: 90%;
+                right: 56.5%;
+            }
+            .nav2 ul li
+            {
+                display: inline-block;
+            }
+            .nav2 ul li a
+            {
+                color: rgba(255, 255, 255, 0.658);
+                font-weight: bolder;
+                padding-left: 15px;
+                
+            }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="coffee.html">HOME</a>
+              </li>
+              
+            <li class="nav-item">
+                <a class="nav-link" href="coffeeabout.html">ABOUT</a>
+              </li>
+              
+            <li class="nav-item">
+                <a class="nav-link" href="coffeemenu.html">MENU</a>
+              </li>
+    </ul>
+    <div class="image">
+        <div class="logs">
+            <img src="logo-black.png" height="90px" width="100px">
+    </div>
+    <div class="nav1">
+    <ul>
+        <li class="nav-item">
+            <a class="nav-link" href="#">RESERVATION</a>
+          </li>
+          
+        <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+          <div class="ser">
+          <a class="nav-link" href="#"><img src="search-interface-symbol.png" height="25px" width="25px"></a>
+        </div>
+</ul>    
+</div>
+
+<div class="cop card text-white">
+    <img class="card-img" src="breadcrumb-bg-1.jpeg" height="400px" alt="Card image">
+    <div class="card-img-overlay">
+      <h1 class="hop card-title">CAFENA MENU</h1>
+      <p class="sop card-text">HOME / MENU</p>
+    </div>
+  </div>
+  <div class="men">
+      <p class="cur">MENU</p>
+      <h1>OUR POPULAR MENU</h1>
+  </div>
+  <div class="but">
+  <button type="button" class="shi btn btn-outline-info">ALL</button>
+<button type="button" class="shi btn btn-outline-info">CHOCOLATE</button>
+<button type="button" class="shi btn btn-outline-info">COFFEE</button>
+<button type="button" class="shi btn btn-outline-info">SANDWICHES</button>
+<button type="button" class="shi btn btn-outline-info">SWEETS</button>
+<button type="button" class="shi btn btn-outline-info">BLACK TEA</button>
+<button type="button" class="shi btn btn-outline-info">GREEN TEA</button>
+</div>
+    <!---rates-->
+   <div class="got container">
+    
+       <div class="box1">
+           <a class="achu"href="#">AMERICANO ROBASTA COFFEE</a>
+           <p class="echu">$ 12.00</p>
+           
+    <img class="imp1" src="menu-2-3.png" height="90px" width="90px">
+    </div>
+           <div class="box2"> 
+           <a class="achu1"href="#">AMERICANO ROBASTA COFFEE</a>
+           <p class="echu1">$ 12.00</p>
+    <img class="imp2" src="menu-2-4.png" height="90px" width="90px">
+                 </div>
+            
+                 <div class="box3">
+                    <a class="achu2"href="#">CAFE AU LAIT COFFEE</a>
+                    <p class="echu2">$ 12.00</p>
+                    
+             <img class="imp3" src="menu-2-5.png" height="90px" width="90px">
+             </div>
+                    <div class="box4"> 
+                    <a class="achu3"href="#">ESPRESSO RISTRETTO COFFEE</a>
+                    <p class="echu3">$ 12.00</p>
+             <img class="imp4" src="menu-2-6.png" height="90px" width="90px">
+                          </div>
+                          
+                        <div class="box5">
+                            <a class="achu4"href="#">VIRGIN COFFEE GRED</a>
+                            <p class="echu4">$ 12.00</p>
+                            
+                     <img class="imp5" src="menu-2-1.png" height="90px" width="90px">
+                     </div>
+                            <div class="box6"> 
+                            <a class="achu5"href="#">ESPRESSO RISTRETTO COFFEE</a>
+                            <p class="echu5">$ 12.00</p>
+                     <img class="imp6" src="menu-2-2.png" height="90px" width="90px">
+                                  </div>
+
+                    
+                                  <div class="box7">
+                                    <a class="achu6"href="#">BRAZIL COFFEE GRED</a>
+                                    <p class="echu6">$ 12.00</p>
+                                    
+                             <img class="imp7" src="menu-2-3.png" height="90px" width="90px">
+                             </div>
+                                    <div class="box8"> 
+                                    <a class="achu7"href="#">ESPRESSO RISTRETTO BEANS</a>
+                                    <p class="echu7">$ 12.00</p>
+                             <img class="imp8" src="menu-2-4.png" height="90px" width="90px">
+                                          </div>
+                                          
+                                  <div class="box9">
+                                    <a class="achu8"href="#">CAFFÈ LATTE BEANS</a>
+                                    <p class="echu8">$ 12.00</p>
+                                    
+                             <img class="imp9" src="menu-2-5.png" height="90px" width="90px">
+                             </div>
+                                    <div class="box10"> 
+                                    <a class="achu9"href="#">TURKISH ROSTED COFFEE</a>
+                                    <p class="echu9">$ 12.00</p>
+                             <img class="imp10" src="menu-2-6.png" height="90px" width="90px">
+                                          </div>
+                                          
+                                  <div class="box11">
+                                    <a class="achu10"href="#">BANGALADESHI ROSTED COFFEE</a>
+                                    <p class="echu10">$ 12.00</p>
+                                    
+                             <img class="imp11" src="menu-2-1.png" height="90px" width="90px">
+                             </div>
+                                    <div class="box12"> 
+                                    <a class="achu11"href="#">INDIAN ROSTED COFFEE</a>
+                                    <p class="echu11">$ 12.00</p>
+                             <img class="imp12" src="menu-2-2.png" height="90px" width="90px">
+                                          </div>
+                </div>
+                <!--footer-->
+               <div class="footer">
+                <div class="con1">
+                    <img src="ft-phone.png" height="30px" width="20px">
+                    <p>PHONE : 91 9629 278 815</p>
+                </div>
+                <div class="mar1">
+                    <img src="ft-map-marker.png" height="30px" width="20px">
+                    <p>ADDRESS : 30 NORTH WEST NEW</p>
+                </div>
+                
+    <form>
+        
+        <select class="email">
+            <option>Enter your mail</option>
+          </select>
+          <button class="tux">SUBSCRIBE</button>
+    </form>
+    
+    <div class="logss">
+        <img src="logo (1).png" height="90px" width="110px">
+        <h5>Donec et nibh maximus, congue est eu, mattis nunc. Praesent ut quam quis quam<br>venenatis fringilla. Morbi vestibulum</h5>
+   </div>
+   <div class="nav2">
+    <ul>
+        <li class="nav2-item">
+            <a class="nav-link" href="coffee.html">HOME</a>
+          </li>
+          
+        <li class="nav2-item">
+            <a class="nav-link" href="coffeeabout.html">ABOUT</a>
+          </li>
+          
+        <li class="nav2-item">
+            <a class="nav-link" href="coffeemenu.html">MENU</a>
+          </li>
+          
+        <li class="nav2-item">
+            <a class="nav-link" href="#">RESERVATION</a>
+          </li>
+          
+        <li class="nav2-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+          </ul>
+
+               </div>      
+</body>
+</html
